@@ -5,6 +5,7 @@ body {
 
 input {
   border-radius: 8px;
+  border: none;
   padding: 6px 16px;
 }
 
