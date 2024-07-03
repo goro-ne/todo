@@ -9,7 +9,7 @@ const onClickAdd = () => {
 };
 /**
  * 未完了リストに追加
- * @param {*} todo string
+ * @param {string} todo 追加するTODOテキスト
  */
 const createIncompleteTodo = (todo) => {
   const li = document.createElement("li");
