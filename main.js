@@ -27,6 +27,13 @@ const createIncompleteTodo = (todo) => {
     completeButton.remove();
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
+    backButton.addEventListener("click", () => {
+      // 未完了リストにアイテムを作成
+      const todoText = backButton.previousElementSibling.innerText;
+      createIncompleteTodo(todoText);
+      // 対象アイテムを削除
+      backButton.closest("li").remove();
+    });
     moveTarget.firstElementChild.appendChild(backButton);
     document.getElementById("complete-list").appendChild(moveTarget);
   });
